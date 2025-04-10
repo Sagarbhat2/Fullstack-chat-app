@@ -1,0 +1,162 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+[data-theme="light"] {
+  background-color: white;
+  color: black;
+}
+
+[data-theme="dark"] {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+[data-theme="cupcake"] {
+  background-color: #fdf4ff; /* Light Pink */
+  color: #4a044e;
+}
+
+[data-theme="bumblebee"] {
+  background-color: #fef9c3; /* Soft Yellow */
+  color: #78350f;
+}
+
+[data-theme="emerald"] {
+  background-color: #d1fae5; /* Soft Green */
+  color: #065f46;
+}
+
+[data-theme="corporate"] {
+  background-color: #ffffff;
+  color: #1e40af;
+}
+
+[data-theme="synthwave"] {
+  background-color: #2d033b;
+  color: #ff00ff;
+}
+
+[data-theme="retro"] {
+  background-color: #efcc00;
+  color: #1b1b1b;
+}
+
+[data-theme="cyberpunk"] {
+  background-color: #ff00ff;
+  color: #00ffff;
+}
+
+[data-theme="valentine"] {
+  background-color: #ffafcc;
+  color: #ff3366;
+}
+
+[data-theme="halloween"] {
+  background-color: #1a1a1a;
+  color: #ff7518;
+}
+
+[data-theme="garden"] {
+  background-color: #dcfce7;
+  color: #14532d;
+}
+
+[data-theme="forest"] {
+  background-color: #14532d;
+  color: #dcfce7;
+}
+
+[data-theme="aqua"] {
+  background-color: #67e8f9;
+  color: #064e3b;
+}
+
+[data-theme="lofi"] {
+  background-color: white;
+  color: black;
+}
+
+[data-theme="pastel"] {
+  background-color: #fde2e4;
+  color: #9b2226;
+}
+
+[data-theme="fantasy"] {
+  background-color: #fbcfe8;
+  color: #5b21b6;
+}
+
+[data-theme="wireframe"] {
+  background-color: #e5e7eb;
+  color: black;
+}
+
+[data-theme="black"] {
+  background-color: black;
+  color: white;
+}
+
+[data-theme="luxury"] {
+  background-color: #1f2937;
+  color: #facc15;
+}
+
+[data-theme="dracula"] {
+  background-color: #282a36;
+  color: #ff79c6;
+}
+
+[data-theme="cmyk"] {
+  background-color: #ffffff;
+  color: #ff00ff;
+}
+
+[data-theme="autumn"] {
+  background-color: #ff9f43;
+  color: #422006;
+}
+
+[data-theme="business"] {
+  background-color: #1e293b;
+  color: white;
+}
+
+[data-theme="acid"] {
+  background-color: #f1f000;
+  color: #000000;
+}
+
+[data-theme="lemonade"] {
+  background-color: #f4f4a0;
+  color: #665c00;
+}
+
+[data-theme="night"] {
+  background-color: #1e293b;
+  color: #cbd5e1;
+}
+
+[data-theme="coffee"] {
+  background-color: #6f4e37;
+  color: #f5e0dc;
+}
+
+[data-theme="winter"] {
+  background-color: #dbeafe;
+  color: #1e3a8a;
+}
+
+[data-theme="dim"] {
+  background-color: #373737;
+  color: white;
+}
+
+[data-theme="nord"] {
+  background-color: #2e3440;
+  color: #d8dee9;
+}
+
+[data-theme="sunset"] {
+  background-color: #ff4500;
+  color: #f4f4f4;
+}
