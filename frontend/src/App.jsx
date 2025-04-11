@@ -42,6 +42,8 @@ if(isCheckingAuth && !authUser) return(
      <Toaster/>
     </div>
   )
+
+  
 }
 
 export default App

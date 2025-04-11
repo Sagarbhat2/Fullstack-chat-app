@@ -34,15 +34,16 @@ Signup:async(data)=>{
     set({isSigninUp:true});
     try {
         const res=await axiosinstance.post("/auth/signup",data);
-        console.log(res);
-        set({authUser:req.user});
+        console.log(res.data);
+        set({authUser:res.data});
         toast.success("Register Sucess");
         get().connectsocket()
 
     } catch (error) {
         console.log(error)
         toast.error(error.response.data.message);
-        set({isSigninUp:false});
+      }finally{
+        set({isSigninUp:false})
 }
 },
 
@@ -60,7 +61,7 @@ logout:async ()=>{
 Login:async (data) => {
     set({ isLoggingIn: true });
     try {
-      const res = await axiosinstance.post("/auth/login", data);
+      const res = await axiosinstance.post("/auth/login",data);
       set({ authUser: res.data });
       toast.success("Logged in successfully");
       get().connectsocket()

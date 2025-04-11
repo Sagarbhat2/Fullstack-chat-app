@@ -19,6 +19,7 @@ const SideBar = () => {
   const filteredUser=ShowOnlineUsers ? users.filter(user => onlineUsers.includes(user._id)):users;
 
   if(isUseresLoading) return <SidebarSkeleton/>
+
   return (
     <aside className='h-full w-20 lg:w-72 border-r border-base-300 flex flex-col transition-all duration-200'>
       <div className='border-b border-base-300 w-full p-5'>
@@ -42,6 +43,7 @@ const SideBar = () => {
       </div>
 
       <div className="overflow-y-auto w-full py-3">
+        
         {filteredUser.map((user) => (
           <button
             key={user._id}
@@ -68,7 +70,7 @@ const SideBar = () => {
 
             {/* User info - only visible on larger screens */}
             <div className="hidden lg:block text-left min-w-0">
-              <div className="font-medium truncate">{user.fullname}</div>
+              <div className="font-medium truncate">{user.fullName}</div>
               <div className="text-sm text-zinc-400">
                 {onlineUsers.includes(user._id) ? "Online" : "Offline"}
               </div>

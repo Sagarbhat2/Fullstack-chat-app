@@ -5,9 +5,9 @@ import cloudinary from "../lib/cloudinary.js"
 
 export const signup=async(req,res)=>{
     console.log(req.body)
-    const {fullname,email,password}=req.body;
+    const {fullName,email,password}=req.body;
    try {
-    if (!fullname || !email || !password) {
+    if (!fullName || !email || !password) {
         return res.status(400).json({ message: "All fields are required" });
       }
     if(password.length<6){
@@ -20,7 +20,7 @@ export const signup=async(req,res)=>{
     const salt=await bcrypt.genSalt(10);
     const HashedPassword=await bcrypt.hash(password,salt)
 
-    const newUser= new User({fullname,email,password:HashedPassword});
+    const newUser= new User({fullName,email,password:HashedPassword});
 
     // jwt tocken
     if(newUser){
@@ -28,9 +28,9 @@ export const signup=async(req,res)=>{
       generateToken(newUser._id,res);
       await newUser.save();
 
-      res.status(201).json({
+      res.status(200).json({
         _id:newUser._id,
-        fullname:newUser.fullname,
+        fullName:newUser.fullName,
         email:newUser.email,
         profilepic:newUser.profilepic,
       });
@@ -59,7 +59,7 @@ export const login=async(req,res)=>{
 
        res.status(200).json({
         _id:user._id,
-        fullname:user.fullname,
+        fullName:user.fullName,
         email:user.email,
         profilepic:user.profilepic
        })
@@ -98,6 +98,7 @@ export const updateprofile=async(req,res)=>{
         return res.status(500).json({message:"Internal server error"});
 
     }
+    
 }
 export const checkAuth=async(req,res,next)=>{
     try {
